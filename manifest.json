@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "Dooray-chrome-extension",
+    "description": "두레이를 편리하게 사용할 수 있게 도와줍니다.",
+    "version": "1.0",
+    "icons": {
+        "16": "assets/icon16.png",
+        "48": "assets/icon48.png"
+    },
+    "content_scripts": [{
+        "matches": ["*://*.dooray.com/*"],
+        "js": ["content.js"]
+    }],
+    "permissions": [
+        "*://*.dooray.com/*",
+        "contextMenus",
+        "activeTab",
+        "notifications"
+    ],
+    "background": {"page": "background.html"}
+}
